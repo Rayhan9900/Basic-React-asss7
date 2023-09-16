@@ -1,10 +1,11 @@
 
 import Header from './Components/header/Header'
-
 import './App.css'
-import Select from './Components/Select/Select'
+import Course from './Components/Course/Course'
+import Select from './Components/Selects/Select'
 
 function App() {
+
 
 
 
@@ -13,10 +14,13 @@ function App() {
     <>
 
       <Header></Header>
+      <div className='md:flex mt-20'>
+        <Select></Select>
+        <Course></Course>
+      </div>
 
 
 
-      <Select></Select>
 
     </>
   )

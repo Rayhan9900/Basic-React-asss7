@@ -1,29 +1,18 @@
-import Select from "../Select/Select"
 
-
-function Course({ allSelect }) {
-
-
-
+function Course() {
     return (
 
-        <div className="  underline  ">
-            <h2  >Credit Hour Remaining </h2>
-            <h2 className="font-bold ">Course Name</h2>
-            {
-                allSelect.map((selector, index) => (
-                    <ul>
-                        <li>{index + 1}{selector.name}</li>
-                    </ul>
-                ))
-            }
-            <div>
-                <h4>Total Credit Hour : {allSelect.length} </h4>
+        <div className="underline">
+            <h2 className="">Credit Hour Remaining:</h2>
 
+            <h2 className="mt-2  font-bold ">Course Name</h2>
 
+            <div className="mt-2">
+                <h4 className="" >Total Credit Hour :</h4>
 
-                <h4>Total Price :</h4>
+                <h4>Total Price : </h4>
             </div>
+
         </div>
 
 

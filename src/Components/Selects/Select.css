@@ -1,0 +1,24 @@
+/* .container {}
+
+.card-container {}
+
+.card {
+    width: 200px;
+    height: 300px;
+    padding: 24px;
+}
+
+.image {
+    width: 370px;
+    height: 188px;
+}
+
+.total-price {
+    display: flex;
+    gap: 56px;
+    margin-top: 34px;
+}
+
+.card-btn {
+    padding-left: 96px;
+} */

@@ -1,26 +1,33 @@
 import PropTypes from 'prop-types'
 import Select from '../Selects/Select'
-import Selector from '../selector/Selector'
 
-function Course({ courseName }) {
+function Course({ courseName, }) {
 
 
     const total = courseName.reduce((sum, current) => sum + current.credit, 0)
 
+    const price = courseName.reduce((total, current,) =>
+        total + current.price, 0)
+
     return (
 
+        <div className=" underline">
+            <h2 className="text-xl text-blue-500">Credit Hour Remaining:{total}</h2>
 
-        <div className="underline">
-            <h2 className="text-2xl">Credit Hour Remaining:</h2>
+            <div>
+                <h2 className="mt-2 font-bold ">Course Name:</h2>
+                {
+                    courseName.map((Select, index) => (
+                        <ol key={Select.id}>
+                            {index + 1} {Select.name}
+                        </ol>
+                    ))
+                }
+            </div>
 
-            <h2 className="mt-2 font-bold ">Course Name: {courseName.name}</h2>
+            <h4 className='mt-2'>Total Credit Hour:{total}{courseName.credit}</h4>
 
-
-            <h4>Total Credit Hour:{total}{courseName.credit}</h4>
-
-
-            <h4>Total Price : </h4>
-
+            <h4>Total Price:{price}{courseName.price} </h4>
 
         </div>
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 
-function Selector({ selector, handleCourseName }) {
+function Selector({ selector, handleCourseName, handleSelect }) {
     const { title, cover, name, credit } = selector
 
 
@@ -25,7 +25,7 @@ function Selector({ selector, handleCourseName }) {
 
             <div className='mt-4 text-3xl text-white bg-blue-500 text-center rounded-3xl '>
                 <button
-                    onClick={handleCourseName}
+                    onClick={() => handleCourseName(selector)}
                 >select</button>
             </div>
 
@@ -36,7 +36,7 @@ function Selector({ selector, handleCourseName }) {
 
 Selector.propTypes = {
     selector: PropTypes.object.isRequired,
-    handleCourse: PropTypes.func
+    handleCourseName: PropTypes.func
 }
 export default Selector
 

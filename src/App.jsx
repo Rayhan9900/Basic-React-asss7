@@ -9,17 +9,23 @@ function App() {
 
   const [courseName, setCourseName] = useState([])
 
+
   const handleCourseName = selector => {
-    console.log(selector)
+    const newSelect = [...courseName, selector]
+    setCourseName(newSelect)
   }
+
+
+
 
   return (
     <>
 
       <Header></Header>
       <div className='md:flex  max-w-7xl mx-auto   gap-10 mt-20'>
-        <Select handleCourseName={handleCourseName} ></Select>
-        <Course></Course>
+        <Select handleCourseName={handleCourseName}
+        ></Select>
+        <Course courseName={courseName}></Course>
       </div>
 
 

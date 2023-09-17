@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import './Select.css'
 import Selector from '../selector/Selector';
 import Course from '../Course/Course';
+import PropTypes from 'prop-types'
 
 
-function Select({ handleCourseName }) {
+function Select({ handleCourseName, handleSelect }) {
     const [selectors, setSelectors] = useState([]);
 
 
@@ -20,11 +21,12 @@ function Select({ handleCourseName }) {
 
     return (
         <div className='md:flex  '>
-            <div className='md:w-2/3 grid grid-cols-3  gap-10'>
+            <div className=' grid grid-cols-3  gap-10'>
 
                 {
                     selectors.map(selector =>
                         <Selector handleCourseName={handleCourseName}
+                            // handleSelect={handleSelect}
                             key={selector.id}
                             selector={selector}>
 
@@ -33,12 +35,16 @@ function Select({ handleCourseName }) {
 
 
             </div >
-            <Course></Course>
+
 
         </div>
     )
 }
 
+Select.propTypes = {
+    handleCourseName: PropTypes.func,
+    // handleSelect: PropTypes.func
+}
 
 
 
